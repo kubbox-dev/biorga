@@ -1,0 +1,134 @@
+h3{
+	&.section_title{
+		font-size: rem-calc(55);
+	}
+
+	&.page_subtitle{
+		font-family: $catamaran;
+		font-size: rem-calc(20);
+		text-transform: uppercase;
+		color: getColor(LigthGray);
+	}
+}
+
+h1{
+	&.page_title{
+		font-size: rem-calc(55);
+	}
+}
+.social-network{
+	margin-bottom: rem-calc(25);
+	@include breakpoint( small only)
+	{
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.social-links{
+		li{
+
+			padding: 0 rem-calc($theme-global-padding - 5) 0 0;
+			a{
+				color: $white;
+				font-size: rem-calc(20);
+				background-color: getColor( DefaultGray );
+				width: rem-calc( $line-height-computed * 2 );
+				height: rem-calc( $line-height-computed * 2 );
+
+				padding: 0;
+
+				@include border-radius(50%);
+
+				&:hover{
+					background-color: getColor( LigthGray );
+					@include transition( all 0.3s ease-in-out 0s);
+				}
+
+				@include transition( all 0.3s ease-in-out 0s);
+			}
+							
+			&:nth-child(1){ a{ padding: rem-calc($theme-global-padding / 2) rem-calc($theme-global-padding - 5); } }
+			&:nth-child(2){ a{ padding: rem-calc($theme-global-padding / 2) rem-calc(($theme-global-padding / 2) + 1); } }
+		}
+	}
+}
+.whatsapp_sending{
+	.whatsapp_footer{
+		li{
+			padding: 0 rem-calc($theme-global-padding - 5) 0 0;
+			a{
+				color: $white;
+				font-size: rem-calc( $line-height-computed );
+				background-color: getColor( DefaultGray );
+				width: rem-calc( $line-height-computed * 2 );
+				height: rem-calc( $line-height-computed * 2 );
+				padding: rem-calc( $theme-global-padding / 2 ) rem-calc( ($theme-global-padding / 2) + 2 );
+
+				@include border-radius(50%);
+
+				&:hover{
+					background-color: getColor( LigthGray );
+					@include transition( all 0.3s ease-in-out 0s);
+				}
+								
+				@include transition( all 0.3s ease-in-out 0s);
+			}
+		}
+	}
+}
+
+@mixin theme-sl(){
+	.theme-sl{
+		padding-top: rem-calc($theme-global-padding * 2);
+		padding-bottom: rem-calc($theme-global-padding * 2);
+
+		@include breakpoint(medium){
+			padding-top: rem-calc($theme-global-padding * 3);
+			padding-bottom: rem-calc($theme-global-padding * 3);
+		}
+	}
+}
+
+@mixin grid-large-centered() {
+	.large-centered {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.large-centered, .large-centered:last-child:not(:first-child) {
+		float: none;
+		clear: both;
+	}	
+}
+
+@mixin grid-medium-centered() {
+	.medium-centered {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.medium-centered, .medium-centered:last-child:not(:first-child) {
+		float: none;
+		clear: both;
+	}
+}
+
+@mixin spacedY($y1: $line-height-computed * 3, $y2: $line-height-computed * 3){
+	padding-top: rem-calc($line-height-computed * 2);
+	padding-bottom: rem-calc($line-height-computed * 2);
+
+	@include breakpoint(medium)
+	{
+		padding-top: rem-calc($y1);
+		padding-bottom: rem-calc($y2);
+	}
+}
+@mixin spacedX($x1: $line-height-computed * 3, $x2: $line-height-computed * 3){
+	padding-left: rem-calc($line-height-computed * 2);
+	padding-right: rem-calc($line-height-computed * 2);
+
+	@include breakpoint(medium)
+	{
+		padding-left: rem-calc($x1);
+		padding-right: rem-calc($x2);
+	}
+}

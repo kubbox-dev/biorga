@@ -1,0 +1,101 @@
+.nav_breadcrumbs{
+	background-color: #f9f9f9;
+	display: table;
+	.breadcrumbs{
+		margin: rem-calc($theme-global-margin / 4) rem-calc($theme-global-margin);
+	}
+}
+#blog{
+	.item-list{
+		margin-bottom: rem-calc($theme-global-margin * 2);
+		.date-blog{
+			font-size: rem-calc(20);
+			color: getColor(DefaultGray);
+		}
+		.blog-title{
+			color: getColor(DarkGray);
+			line-height: 1;
+			margin-bottom: rem-calc($theme-global-margin * 1.5);
+		}
+		.blog-content{
+			color: getColor(DarkGray);
+			@include breakpoint( medium )
+			{
+				padding: 0 rem-calc($theme-global-padding * 4.5) 0 0
+			}
+		}
+	}
+}
+.single{
+	&.single-post{
+		#blog{
+			.header-page{}
+			#main{
+				section{
+					article{
+						color: getColor(DarkGray);
+						font-size: rem-calc(17);
+						.entry-media-thumbnail{
+							figure{
+								img{
+									width: 100%;
+								}
+							}
+						}
+						.meta-entries{
+							margin-top: rem-calc($theme-global-margin);
+							font-size: rem-calc($line-height-computed);
+							color: getColor(DarkGreen);
+						}
+						.entry-name{
+							h2{
+								line-height: 1;
+								margin-bottom: rem-calc($theme-global-margin * 1.5);
+							}
+						}
+						.entry-content{
+
+							strong{ font-weight: 600; }
+							h1, h1 > strong, h1 > b,
+							h2, h2 > strong, h2 > b,
+							h3, h3 > strong, h3 > b,
+							h4, h4 > strong, h4 > b,
+							h5, h5 > strong, h5 > b{
+								font-weight: 500;
+							}
+						}
+
+						#gallery-entries{
+							.post-entry-desc{
+								margin: rem-calc($theme-global-margin) 0;
+								p{
+									font-size: 1rem;
+								}
+							}
+						}
+
+							aside{
+								//padding-left: rem-calc($theme-global-padding);
+								&#secondary{
+									section{
+										&#recent-entries{
+											.widget-title{ display: none; }
+										}
+										.widget-title{
+											padding-left: 1rem;
+											padding-right: 1rem;
+										}
+										margin-bottom: rem-calc($theme-global-margin);
+										ul{
+											@extend .menu;
+											@extend .vertical;
+										}
+									}
+								}
+							}
+					}
+				}
+			}
+		}
+	}
+}

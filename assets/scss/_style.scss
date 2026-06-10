@@ -1,0 +1,1314 @@
+
+// Revolution Slider — elimina barras negras del video de fondo
+.rs-fullvideo-cover {
+	display: none !important;
+}
+
+.rev_slider {
+	.rs-background-video-layer {
+		overflow: hidden !important;
+
+		// Escalar iframe para cubrir el contenedor sin barras negras
+		iframe {
+			position: absolute !important;
+			top: 50% !important;
+			left: 50% !important;
+			width: 100vw !important;
+			height: 56.25vw !important;   // 16:9 basado en ancho
+			min-height: 100% !important;
+			min-width: 177.78vh !important; // 16:9 basado en alto
+			transform: translate(-50%, -50%) !important;
+		}
+
+		// Overlay transparente que oculta los controles de YouTube
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 35;
+			background: transparent;
+		}
+	}
+}
+
+.more_link{
+	a{
+		font-family: $barlow-condensed;
+		font-weight: 500;
+		display: block;
+		position: relative;
+		font-size: rem-calc(26);
+		text-transform: uppercase;
+		color: getColor(LightGreen);
+		padding-left: rem-calc(80);
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 10%; 
+			height: 1px;
+			border: 2px solid getColor(LightGreen);
+
+			@include transition(all 0.3s ease 0s);
+			@include border-radius(rem-calc(10));
+			@include translate(0, -50%);
+		}
+
+		&:hover{
+			color: getColor(LightGreen);
+			@include transition(all 0.3s ease 0s);
+		}
+
+		@include transition(all 0.3s ease 0s);
+	}
+	button{
+		cursor: pointer;
+		font-family: $barlow-condensed;
+		font-weight: 500;
+		display: block;
+		position: relative;
+		font-size: rem-calc(26);
+		text-transform: uppercase;
+		color: getColor(LightGreen);
+		padding-left: rem-calc(80);
+		margin-bottom: rem-calc($theme-global-margin);
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 40%; 
+			height: 1px;
+			border: 2px solid getColor(LightGreen);
+
+			@include transition(all 0.3s ease 0s);
+			@include border-radius(rem-calc(10));
+			@include translate(0, -50%);
+		}
+
+		&:hover{
+			color: getColor(LightGreen);
+			@include transition(all 0.3s ease 0s);
+		}
+
+		@include transition(all 0.3s ease 0s);
+	}
+}
+
+.more_link_multimedia{
+	@include spacedY($line-height-computed * 3, 0);
+	a{
+		display: block;
+		position: relative;
+		font-size: rem-calc(26);
+		text-transform: uppercase;
+		color: getColor(LightGreen);
+		padding-left: rem-calc(80);
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 18%; 
+			height: 1px;
+			border: 2px solid getColor(LightGreen);
+
+			@include transition(all 0.3s ease 0s);
+			@include border-radius(rem-calc(10));
+			@include translate(0, -50%);
+		}
+
+		&:hover{
+			color: getColor(LightGreen);
+			@include transition(all 0.3s ease 0s);
+		}
+
+		@include transition(all 0.3s ease 0s);
+	}
+}
+
+.error404{
+	.page-number-error{
+		.error-page-number{
+			font-size: rem-calc(300);
+			font-weight: $global-weight-bold;
+			letter-spacing: -(rem-calc(15));
+			color: getColor(LightGreen);
+			margin-bottom: 0;
+			line-height: 1;
+
+			@include breakpoint( small only)
+			{
+				font-size: rem-calc(150);
+				letter-spacing: -(rem-calc(8));
+			}
+		}
+	}
+	.page-header{
+		.error-page-title{
+			font-size: rem-calc(60);
+			font-weight: $global-weight-bold;
+			color: getColor(DarkGray);
+			margin-bottom: 0;
+			line-height: 1;
+		}
+	}
+}
+
+// Hero video banner
+.hero-video-wrapper {
+	overflow: hidden;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-color: getColor(DarkGreen);
+
+	// HTML5 video — flujo normal, el video define su propio alto
+	video {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 100vh;
+	}
+
+	// YouTube iframe — necesita el truco de escala porque no soporta object-fit
+	iframe {
+		display: block;
+		width: 100%;
+		height: 56.25vw;
+		max-height: 100vh;
+		border: 0;
+	}
+}
+
+header{
+	&#main-header{
+		.expand-button-mobile{
+			font-size: 1rem;
+			margin-bottom: 0;
+			position: relative;
+			top: 50%;
+			right: 0;
+			@include translate(0, -50%);
+		}
+
+		border-bottom: 1px solid getColor(LightenGray);
+	}
+
+	&.header_fixed{
+		background-color: $white;
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: $fixed-header-zindex;
+
+		@include box-shadow(0px 1px 4px getColor(DefaultGray));
+	}
+}
+#navigation{
+	padding: rem-calc($theme-global-padding * 1.5) 0;
+	ul{
+		&.top-menu{
+			li{
+				a{
+					font-size: rem-calc(20);
+					text-transform: uppercase;
+
+					&:hover{
+						color: getColor(LightGreen);
+						@include transition(all 0.5s ease 0s);
+					}
+
+					@include transition(all 0.5s ease 0s);
+				}
+
+				&.active{
+					a{
+						color: getColor(LightGreen);
+					}
+				}
+
+				&.whatsapp{
+					a{
+						padding: 0 1rem;
+						font-size: rem-calc(40);
+						color: getColor(LightGreen);
+					}
+				}
+			}
+		}
+
+		&.offcanvas-menu{
+			li{
+				a{
+					font-size: rem-calc(20);
+					font-weight: 500;
+				}
+
+				&.active{
+					a{
+						color: getColor(DarkGreen);
+						font-weight: 600;
+					}
+				}
+			}
+			&.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+			    display: block !important;
+			    width: rem-calc(20) !important;
+			    height: rem-calc(20) !important;
+			    content: '\f067' !important;
+			    position: absolute !important;
+			    top: 30% !important;
+			    margin-top: -3px !important;
+			    right: 1rem !important;
+			    border: none !important;
+			    text-align: center;
+			    font-family: 'FontAwesome';
+			}
+			&.accordion-menu .is-accordion-submenu-parent[aria-expanded="true"] > a::after {
+				content: '\f2d1' !important;
+				 top: 15% !important;
+			    -webkit-transform: rotate(0) !important;
+			    -ms-transform: rotate(0) !important;
+			    transform: rotate(0) !important;
+			    -webkit-transform-origin: 50% 50%;
+			    -ms-transform-origin: 50% 50%;
+			    transform-origin: 50% 50%;
+			}
+		}
+	}
+}
+
+.wrapper{
+	#homepage{
+		#main{
+			section{
+				#lo_que_hacemos {
+    @include spacedY($line-height-computed * 4, $line-height-computed * 4);
+
+    .header-page {
+        margin-bottom: rem-calc($theme-global-margin * 3);
+    }
+
+    .lqh-cards-row {
+        align-items: stretch;
+    }
+
+    .lqh-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: rem-calc($theme-global-margin * 2);
+
+        &__title {
+            font-family: $catamaran;
+            font-size: rem-calc(20);
+            color: getColor(LigthGray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: rem-calc($theme-global-margin);
+        }
+
+        &__inner {
+            position: relative;
+            width: 100%;
+            padding-bottom: 110%;
+            border-radius: rem-calc(16);
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-color: getColor(DarkGreen);
+            cursor: pointer;
+
+            // ✅ Fix: hover sobre __inner apunta a la clase completa
+            &:hover .lqh-card__overlay {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        &__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: rem-calc(20);
+            padding-bottom: rem-calc(90);
+            background: rgba(0, 0, 0, 0.25); // oscurece la imagen al hover
+            opacity: 0;
+            pointer-events: none;
+            @include transition(opacity 0.35s ease);
+        }
+
+        &__text {
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: rem-calc(12);
+            padding: rem-calc(20 24);
+            text-align: center;
+            font-size: rem-calc(15);
+            line-height: 1.6;
+            color: getColor(DarkGreen);
+
+            p { margin-bottom: 0; }
+        }
+
+        &__icon {
+            position: absolute;
+            bottom: rem-calc(16);
+            right: rem-calc(16);
+            width: rem-calc(64);
+            height: rem-calc(64);
+            border-radius: 50%;
+            background-color: getColor(MediumGreen);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+
+            img {
+                width: rem-calc(34);
+                height: rem-calc(34);
+                object-fit: contain;
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        &__footer {
+            text-align: center;
+            margin-top: rem-calc($theme-global-margin);
+
+            a.more_link_a {
+                display: inline-block;
+                font-size: rem-calc(18);
+                text-transform: uppercase;
+                color: getColor(LightGreen);
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+}
+				#services{
+					.header-page{
+						h3{
+							margin-bottom: 0;
+							line-height: 1;
+
+							&.title{
+								@include breakpoint( medium)
+								{
+									margin-bottom: rem-calc($theme-global-margin * 6);
+								}
+							}
+						}
+						@include breakpoint( small only)
+						{
+							margin-bottom: rem-calc($theme-global-margin * 1.5);
+						}
+					}
+					.content-services{
+						h3{
+							&.services_title{
+								margin-top: rem-calc($theme-global-margin);
+								margin-bottom: 0;
+								line-height: 1;
+								color: getColor(LigthGray);
+
+								@include breakpoint( medium )
+								{
+									font-size: rem-calc(40);
+								}
+
+							}
+						}
+						.readmore{
+							a{
+								&.readmore_link{
+									display: table;
+									position: relative;
+									font-size: rem-calc(20);
+									text-transform: uppercase;
+									color: getColor(LightGreen);
+									padding-left: rem-calc(60);
+									padding-right: rem-calc(60);
+									margin-top: rem-calc($theme-global-margin);
+									margin-left: auto;
+
+									&:before{
+										content: '';
+										position: absolute;
+										top:50%;
+										left: 0;
+										width: 35%; 
+										height: 1px;
+										border: 1px solid getColor(LightGreen);
+										
+										@include transition(all 0.3s ease 0s);
+										@include border-radius(rem-calc(10));
+										@include translate(0, -50%);
+									}
+								}
+							}
+						}
+					}
+				}
+				#blog_novedades{
+					.item{
+						&.novedades,
+						&.blog{
+							.item_header{
+								.subtitle{
+									font-family: $catamaran;
+									font-size: rem-calc(20);
+									text-transform: uppercase;
+									color: getColor(LigthGray);
+									line-height: 1;
+									margin-bottom: 0;
+								}
+								.section_title{
+									line-height: 1;
+									margin-bottom: rem-calc($theme-global-margin);
+								}
+							}
+							.item_text{
+								margin-top: rem-calc($theme-global-margin);
+								font-size: rem-calc(18);
+							}
+						}
+					}
+				}
+				#multimedia {
+	// Centrado vertical y horizontal opcional (si la sección necesita altura)
+	display: flex;
+	align-items: center;
+	min-height: auto; // o 100vh si quieres centrado vertical en pantalla completa
+	
+	.grid-container {
+		width: 100%;
+	}
+	
+	.video-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.video-container {
+		position: relative;
+		width: 100%;
+		max-width: 1200px; // límite opcional para videos muy grandes
+		background: transparent; // elimina cualquier fondo oscuro
+		
+		// Mantiene aspect ratio 16:9
+		padding-bottom: 56.25%; // 9 / 16 = 0.5625
+		height: 0;
+		overflow: hidden;
+		
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none; // elimina bordes adicionales
+			background: transparent; // evita fondo negro antes de cargar
+		}
+	}
+	
+	// Ajustes responsivos
+	@include breakpoint(medium) {
+		.video-container {
+			max-width: 1000px;
+		}
+	}
+	
+	@include breakpoint(small) {
+		.video-container {
+			padding-bottom: 56.25%; // mantiene 16:9 en móvil
+		}
+	}
+}
+			}
+		}
+	}
+}
+
+// ------------------------ SLIDE TESTIMONIOS --------------------------------
+
+#testimonios {
+	background-color: #f0f0f0;
+	@include breakpoint( medium )
+	{
+		height: rem-calc(635);
+	}
+}
+
+.slider_testimonios {
+	background-color: #f0f0f0;
+}
+
+.slide_viewer {
+height: 450px;
+overflow: hidden;
+position: relative;
+}
+
+.slide_group {
+height: 100%;
+position: relative;
+width: 100%;
+}
+
+.slide {
+display: block;
+height: 100%;
+position: absolute;
+left: 0;
+width: 100%;
+
+.slide-content {
+display: none;
+height: 100%;
+position: absolute;
+left: 50% !important;
+width: 100%;
+
+}
+.author{
+	font-weight: 700;
+}
+.tax_category{
+	text-transform: uppercase;
+}
+}
+
+.slide:first-child,
+.slide-content:first-child {
+display: block;
+}
+
+.slide_buttons {
+	background-color: #f0f0f0;
+left: 0;
+position: absolute;
+right: 0;
+text-align: center;
+}
+
+#content_services_slides .slide_buttons {
+	background-color: $white;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+}
+
+a.slide_btn {
+color: #474544;
+font-size: 42px;
+margin: 0 0.175em;
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+}
+
+.slide_btn.active, .slide_btn:hover {
+color: #428CC6;
+cursor: pointer;
+}
+
+.directional_nav {
+height: 240px;
+margin: 0 auto;
+position: relative;
+top: -340px;
+}
+
+.previous_btn {
+bottom: 0;
+left: 100px;
+margin: auto;
+position: absolute;
+top: 0;
+}
+
+.next_btn {
+bottom: 0;
+margin: auto;
+position: absolute;
+right: 100px;
+top: 0;
+}
+
+.previous_btn, .next_btn {
+cursor: pointer;
+height: 65px;
+opacity: 0.5;
+-webkit-transition: opacity 0.4s ease-in-out;
+-moz-transition: opacity 0.4s ease-in-out;
+-ms-transition: opacity 0.4s ease-in-out;
+-o-transition: opacity 0.4s ease-in-out;
+transition: opacity 0.4s ease-in-out;
+width: 65px;
+}
+
+.previous_btn:hover, .next_btn:hover {
+opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+.previous_btn {
+	left: 50px;
+}
+.next_btn {
+	right: 50px;
+}
+}
+// -------------------------------------------------------------------
+
+#instagram{
+	.widget-instagram{
+		.uk-overlay-background{
+			background: rgba(0,0,0,.7);
+		}
+		.uk-overlay-area:empty::before, 
+		.uk-overlay-icon::before{
+			content: "\f16d";
+			margin-top: initial;
+			margin-left: initial;
+			color: $white;
+
+			@include breakpoint( medium )
+			{
+				width: rem-calc( $line-height-computed * 4 );
+				height: rem-calc( $line-height-computed * 4 );
+				font-size: rem-calc( $line-height-computed * 4 );
+			}
+
+			@include translate( -50%, -50% );
+		}
+	}
+}
+
+.testimonios-top{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	@include translate(-50%, -20%);
+}
+// Footer
+// ---------------
+
+footer{
+	.footer-info{
+		@include breakpoint( small only)
+		{
+			text-align: center;
+		}
+		section{
+			position: relative;
+
+			.widget-title{
+				text-transform: uppercase;
+				font-weight: 500;
+				font-size: rem-calc(30);
+				margin-bottom: rem-calc($theme-global-margin);
+			}
+			.textwidget{
+				p{
+					color: getColor(LigthGray);
+					font-size: rem-calc(20);
+				}
+			}
+		@include breakpoint( medium )
+		{
+			&:after{
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 100%;
+				top: 0;
+				left: 68%;
+				border-right: 1px solid getColor( LigthGray );
+			}
+
+			&:last-child{
+				&:after{
+					content: '';
+					display: none;
+				}
+			}
+		}
+
+			&#siguenos{
+				.escribenos{
+					font-weight: 500;
+					font-size: rem-calc(27);
+				}
+				@include breakpoint( small only )
+				{
+					.whatsapp_sending{
+						display: table;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+
+			&#sale_fertilizers{
+				position: fixed;
+				top: 50%;
+				right: 0;
+				z-index: 99999;
+
+				background-color: $white;
+				padding: rem-calc($theme-global-padding - 5) rem-calc($theme-global-padding);
+
+				a{
+					h2{
+						color: getColor(LightenGreen);
+						line-height: 1;
+						margin-bottom: 0;
+						font-weight: 500;
+						font-size: rem-calc($line-height-computed * 1.5);
+					}
+					h4{
+						color: getColor(DarkGreen);
+						line-height: 1;
+						margin-bottom: 0;
+						font-weight: 500;
+						font-size: rem-calc($line-height-computed);
+					}
+				}
+				@include box-shadow(0px 0px 6px #cbcbcb);
+				@include translate(0, -50%);
+				@include border-radiuses (0, 0, rem-calc($line-height-computed * 1.5), rem-calc($line-height-computed * 1.5));
+			}
+		}
+	}
+
+	.copyright{
+		background-color: getColor(LightenGreen);
+		padding: rem-calc(15) 0 rem-calc(3);
+		margin-top: rem-calc(7);
+		div{
+			color: $white;
+			font-weight: 500;
+			font-size: rem-calc(18);
+			@include breakpoint( small only )
+			{
+				text-align: center;
+			}
+
+			&.site_name{
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+#blog_destacado {
+    padding: rem-calc($line-height-computed * 2) 0;
+
+    .blog-header {
+        margin-bottom: rem-calc($theme-global-margin * 3);
+
+        &__title {
+            font-family: $catamaran;
+            font-size: rem-calc(52);
+            font-weight: 700;
+            color: getColor(DarkGray);
+            margin-bottom: 0;
+            line-height: 1;
+        }
+
+        &__subtitle {
+            font-size: rem-calc(20);
+            color: getColor(LigthGray);
+            margin-bottom: 0;
+        }
+    }
+
+    .blog-featured {
+        display: flex;
+        align-items: stretch;
+        gap: rem-calc(48);
+
+        &__content {
+            flex: 0 0 45%;
+            max-width: 45%;
+        }
+
+        &__post-title {
+            font-family: $catamaran;
+            font-size: rem-calc(30);
+            font-weight: 700;
+            color: getColor(DarkGray);
+            margin-bottom: rem-calc($theme-global-margin);
+        }
+
+        &__excerpt {
+            font-size: rem-calc(20);
+            line-height: 1.7;
+            color: getColor(DarkGray);
+            margin-bottom: rem-calc($theme-global-margin * 1.5);
+        }
+
+        &__benefits-title {
+            font-size: rem-calc(24);
+            font-weight: 600;
+            color: getColor(DarkGray);
+            margin-bottom: rem-calc($theme-global-margin);
+        }
+
+        &__benefits-list {
+            list-style: none;
+            margin: 0 0 rem-calc($theme-global-margin * 2);
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: rem-calc(8);
+
+            li {
+                position: relative;
+                padding: rem-calc(10 16 10 20);
+                font-size: rem-calc(18);
+                color: getColor(DarkGray);
+                background: linear-gradient(
+                    to right,
+                    getColor(LightGreen) 0%,
+                    getColor(MediumGreen) 100%
+                );
+                clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
+            }
+        }
+
+        &__link {
+            display: inline-block;
+            font-size: rem-calc(16);
+            font-weight: 600;
+            text-transform: uppercase;
+            color: getColor(LightGreen);
+            letter-spacing: 0.05em;
+        }
+
+        // Galería
+       &__gallery {
+    flex: 1;
+    display: flex;
+    gap: 0;
+    position: relative;
+    align-items: stretch;
+    max-height: 650px;  // Ajusta este valor para desktop (ej: 480px, 520px, etc.)
+}
+
+        &__gallery-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        &__gallery-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__img-wrap {
+            overflow: hidden;
+            border-radius: rem-calc(4);
+            flex: 1;                // Ocupa el espacio disponible
+            display: flex;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                filter: grayscale(100%);
+                @include transition(filter 0.4s ease);
+            }
+
+            &:hover img {
+                filter: grayscale(0%);
+            }
+        }
+
+        // Eliminamos límites de altura en desktop
+        // (las imágenes pequeñas no tendrán max-height, se adaptarán automáticamente)
+        .blog-featured__gallery-left .blog-featured__img-wrap,
+        .blog-featured__gallery-right .blog-featured__img-wrap {
+            min-height: 0;
+            max-height: none;
+        }
+
+        // Acento verde
+        &__accent {
+            position: absolute;
+            top: rem-calc(-16);
+            right: rem-calc(-16);
+            width: rem-calc(80);
+            height: rem-calc(80);
+            background-color: getColor(MediumGreen);
+            z-index: -1;
+        }
+    }
+
+    // ========== RESPONSIVE (solo se modifican tamaños y disposición, sin limitar alturas en desktop) ==========
+    @media (max-width: 992px) {
+        .blog-featured {
+            flex-direction: column;
+            gap: rem-calc(32);
+
+            &__content {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+             &__gallery {
+            max-height: 420px;
+        }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: rem-calc($line-height-computed * 2) 0;
+
+        .blog-header {
+            margin-bottom: rem-calc($theme-global-margin * 2);
+            &__title { font-size: rem-calc(36); }
+            &__subtitle { font-size: rem-calc(16); }
+        }
+
+        .blog-featured {
+            gap: rem-calc(24);
+            &__post-title { font-size: rem-calc(20); }
+            &__excerpt, &__benefits-list li { font-size: rem-calc(13); }
+            &__benefits-title { font-size: rem-calc(16); }
+            &__gallery { gap: 0; }
+            &__img-wrap { border-radius: rem-calc(2); }
+            &__accent {
+                width: rem-calc(60);
+                height: rem-calc(60);
+                top: rem-calc(-12);
+                right: rem-calc(-12);
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .blog-featured {
+            &__gallery {
+                flex-direction: column;
+                gap: 0;
+            }
+            &__gallery-left {
+                flex-direction: row;
+                gap: 0;
+            }
+            // Limitar altura solo en móvil para que no sea excesiva
+            .blog-featured__gallery-right .blog-featured__img-wrap {
+                min-height: rem-calc(200);
+                max-height: rem-calc(280);
+            }
+            .blog-featured__gallery-left .blog-featured__img-wrap {
+                min-height: rem-calc(140);
+                max-height: rem-calc(180);
+                flex: 1;
+            }
+        }
+    }
+}
+
+
+#casos_de_exito {
+    @include spacedY($line-height-computed * 4, $line-height-computed * 4);
+
+    .casos__main-title {
+        font-family: $catamaran;
+        font-size: rem-calc(48);
+        font-weight: 700;
+        color: getColor(DarkGray);
+        margin-bottom: rem-calc($theme-global-margin * 3);
+
+        @include breakpoint(small only) {
+            font-size: rem-calc(28);
+            margin-bottom: rem-calc($theme-global-margin * 1.5);
+        }
+    }
+
+    // ── Wrapper ────────────────────────────────────────
+    .casos-slider-wrapper {
+        position: relative;
+        width: 100%;
+        // Espacio lateral para las flechas
+        padding: 0 rem-calc(48);
+
+        @include breakpoint(small only) {
+            padding: 0 rem-calc(28);
+        }
+    }
+
+    // ── Flechas ────────────────────────────────────────
+    .casos-slider__arrow {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: getColor(MediumGreen);
+        padding: rem-calc(4);
+        @include transition(opacity 0.2s ease);
+        line-height: 1;
+
+        &:hover  { opacity: 0.6; }
+        &:disabled { opacity: 0.3; cursor: default; }
+
+        &--prev { left: rem-calc(4); }
+        &--next { right: rem-calc(4); }
+
+        svg {
+            display: block;
+            width: rem-calc(40);
+            height: rem-calc(40);
+            stroke: getColor(MediumGreen); // fuerza el color del stroke
+
+            @include breakpoint(small only) {
+                width: rem-calc(26);
+                height: rem-calc(26);
+            }
+        }
+    }
+
+    // ── Track ──────────────────────────────────────────
+    .casos-slider__track {
+        position: relative;
+        width: 100%;
+    }
+
+    // ── Slides: grid — centro solo cubre la fila de imágenes ───
+    .casos-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+
+        // Desktop/tablet: grid 3 columnas
+        display: grid;
+        grid-template-columns: 1fr rem-calc(280) 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "img-b  center  img-a"
+            "cap-b  .       cap-a";
+
+        &.is-active {
+            position: relative;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        // Mobile: 2 columnas, sin panel central
+        @include breakpoint(small only) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "title  title"
+                "img-b  img-a"
+                "cap-b  cap-a";
+        }
+
+        @include breakpoint(medium only) {
+            grid-template-columns: 1fr rem-calc(200) 1fr;
+        }
+    }
+
+    // ── Título del caso en mobile (arriba del todo) ────
+    .casos-slide__mobile-title {
+        display: none;
+
+        @include breakpoint(small only) {
+            display: block;
+            grid-area: title;
+            background-color: getColor(MediumGreen);
+            color: #fff;
+            font-family: $catamaran;
+            font-size: rem-calc(16);
+            font-style: italic;
+            text-align: center;
+            padding: rem-calc(12 16);
+            margin-bottom: 0;
+        }
+    }
+
+    // ── Imágenes ───────────────────────────────────────
+    .casos-slide__img-wrap {
+        width: 100%;
+        align-self: start; // la imagen determina su propio alto
+
+        &--before { grid-area: img-b; }
+        &--after  { grid-area: img-a; }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    // ── Panel central verde (solo desktop/tablet) ──────
+    .casos-slide__center {
+        grid-area: center;
+        background-color: getColor(MediumGreen);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch; // ocupa todo el alto de la fila de imágenes
+        padding: rem-calc(32 28);
+
+        @include breakpoint(small only) {
+            display: none !important;
+        }
+    }
+
+    // ── Captions ──────────────────────────────────────
+    .casos-slide__caption {
+        padding: rem-calc(14 20);
+        background: rgba(255, 255, 255, 0.92);
+
+        &--before { grid-area: cap-b; }
+        &--after  { grid-area: cap-a; }
+
+        @include breakpoint(small only) {
+            padding: rem-calc(8 10);
+        }
+
+        h3 {
+            font-family: $catamaran;
+            font-size: rem-calc(14);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: getColor(DarkGreen);
+            margin-bottom: rem-calc(4);
+
+            @include breakpoint(small only) {
+                font-size: rem-calc(10);
+                margin-bottom: rem-calc(2);
+            }
+        }
+
+        p {
+            font-size: rem-calc(13);
+            color: getColor(DarkGray);
+            margin-bottom: 0;
+
+            @include breakpoint(small only) {
+                font-size: rem-calc(10);
+            }
+        }
+    }
+
+    .casos-slide__project-name {
+        font-family: $catamaran;
+        font-size: rem-calc(22);
+        color: #fff;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+}
+
+.ficha-tecnica-button {
+    margin-top: rem-calc(20);
+    display: flex;
+    justify-content: center;
+
+    .btn-descargar {
+        display: inline-flex;
+        align-items: center;
+        gap: rem-calc(10);
+        padding: rem-calc(12 28);
+        background: #9CC350;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: rem-calc(8);
+        font-weight: 600;
+        font-size: rem-calc(15);
+        cursor: pointer;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(156, 195, 80, 0.25);
+
+        &:hover {
+            background: #8db33f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(156, 195, 80, 0.35);
+        }
+
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(156, 195, 80, 0.25);
+        }
+    }
+
+    // ── Icono animado ──────────────────────────────────
+    .btn-descargar__icon {
+        display: inline-block;
+        animation: bounce-down 2s ease-in-out infinite;
+        flex-shrink: 0;
+
+        @include breakpoint(small only) {
+            width: rem-calc(18);
+            height: rem-calc(18);
+        }
+    }
+
+    .btn-descargar:hover .btn-descargar__icon {
+        animation: bounce-down 0.5s ease-in-out 2;
+    }
+
+    // ── Texto ──────────────────────────────────────────
+    .btn-descargar__text {
+        display: inline-block;
+        letter-spacing: 0.5px;
+
+        @include breakpoint(small only) {
+            font-size: rem-calc(13);
+        }
+    }
+
+    @include breakpoint(small only) {
+        .btn-descargar {
+            padding: rem-calc(10 20);
+            gap: rem-calc(8);
+        }
+    }
+}
+
+// ── Animación del icono ────────────────────────────────
+@keyframes bounce-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+}

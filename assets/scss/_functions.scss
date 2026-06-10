@@ -1,0 +1,6 @@
+@function getColor($color,$color-palette: $theme-palette){
+  @return map-get($color-palette, $color);
+}
+@function headerSizes($breakpoint, $size) {
+  @return rem-calc(map-get(map-get(map-get($header-styles, "#{$breakpoint}"), $size), "font-size") * 1px);
+}

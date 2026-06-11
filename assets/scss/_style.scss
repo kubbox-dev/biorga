@@ -819,6 +819,66 @@ footer{
 	}
 }
 
+// ── Banner parallax vivero ────────────────────────────────
+#vivero_parallax {
+
+    .vivero-parallax__bg {
+        background-image: url('http://biorganicos.com.co/wp-content/uploads/2026/06/el-del-scroll-scaled.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .vivero-parallax__overlay {
+        background: rgba(0, 0, 0, 0.55);
+        padding: rem-calc(80) 0;
+
+        @include breakpoint(small only) {
+            padding: rem-calc(50) 0;
+        }
+    }
+
+    .vivero-parallax__text {
+        color: #fff;
+        font-size: rem-calc(20);
+        text-align: center;
+        line-height: 1.8;
+        max-width: rem-calc(900);
+        margin: 0 auto;
+
+        @include breakpoint(small only) {
+            font-size: rem-calc(16);
+        }
+    }
+
+    .vivero-parallax__footer {
+        text-align: center;
+        padding: rem-calc(28) 0;
+    }
+
+    .vivero-parallax__link {
+        font-family: $barlow-condensed;
+        font-size: rem-calc(22);
+        font-weight: 500;
+        color: getColor(LightGreen);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+
+        &:hover {
+            color: getColor(MediumGreen);
+            @include transition(color 0.3s ease);
+        }
+    }
+
+    // background-attachment: fixed no funciona en iOS Safari
+    @media (hover: none) {
+        .vivero-parallax__bg {
+            background-attachment: scroll;
+        }
+    }
+}
+
 #blog_destacado {
     padding: rem-calc($line-height-computed * 1.5) 0;
 

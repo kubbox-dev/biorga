@@ -216,6 +216,24 @@ $casos      = new WP_Query($args_casos);
 
 
 
+<!-- ── Banner parallax vivero ────────────────────────────── -->
+<div id="vivero_parallax">
+	<div class="vivero-parallax__bg">
+		<div class="vivero-parallax__overlay">
+			<div class="grid-container">
+				<div class="grid-x grid-padding-x">
+					<div class="small-12 cell">
+						<p class="vivero-parallax__text">Estos registros respaldan nuestro compromiso con la calidad, la sanidad vegetal y la sostenibilidad, brindando confianza a empresas, entidades gubernamentales, viveristas, constructores y productores agrícolas que requieren material vegetal certificado para sus proyectos.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="vivero-parallax__footer">
+		<a href="/vivero-y-forestal/" class="vivero-parallax__link">--- VER MÁS ---</a>
+	</div>
+</div>
+
 <!-- ── Blog destacado ─────────────────────────────────────── -->
 <div id="blog_destacado">
 	<div class="grid-container">

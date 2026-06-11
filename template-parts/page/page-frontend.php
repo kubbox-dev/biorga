@@ -146,6 +146,76 @@ $casos      = new WP_Query($args_casos);
 	</div>
 </div>
 
+
+
+<!-- ── Nuestro vivero ──────────────────────────────────────── -->
+<div id="nuestro_vivero">
+	<div class="grid-container">
+
+		<div class="grid-x grid-padding-x">
+			<div class="small-12 cell text-center">
+				<h2 class="vivero-main-title">Nuestro vivero</h2>
+				<p class="vivero-description">Somos productores y comercializadores de plantas debidamente registrados ante el Instituto Colombiano Agropecuario (ICA), garantizando trazabilidad, calidad y cumplimiento de la normatividad vigente para la producción y distribución de material vegetal.</p>
+				<p class="vivero-contamos">Contamos con:</p>
+			</div>
+		</div>
+
+		<div class="grid-x grid-padding-x vivero-cards-row">
+
+			<!-- Card izquierda: info arriba, imagen abajo -->
+			<div class="large-6 medium-6 small-12 cell">
+				<div class="vivero-card vivero-card--left">
+					<div class="vivero-card__info">
+						<div class="vivero-card__header">
+							<div class="vivero-card__text-block">
+								<h3 class="vivero-card__title">Registro ICA</h3>
+								<p class="vivero-card__resolution">Resolución No. 00021485</p>
+								<p class="vivero-card__desc">Como comercializadores de plantas ornamentales, forestales, frutales y aromáticas.</p>
+							</div>
+							<div class="vivero-card__icon">
+								<img src="http://biorganicos.com.co/wp-content/uploads/2026/06/sello-2.svg" alt="Sello ICA ornamentales">
+							</div>
+						</div>
+					</div>
+					<div class="vivero-card__img-outer">
+						<div class="vivero-card__accent"></div>
+						<div class="vivero-card__img-wrap">
+							<img src="http://biorganicos.com.co/wp-content/uploads/2026/06/plantas-ornamentales.jpg" alt="Plantas ornamentales">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Card derecha: imagen arriba, info abajo -->
+			<div class="large-6 medium-6 small-12 cell">
+				<div class="vivero-card vivero-card--right">
+					<div class="vivero-card__img-outer">
+						<div class="vivero-card__accent"></div>
+						<div class="vivero-card__img-wrap">
+							<img src="http://biorganicos.com.co/wp-content/uploads/2026/06/Limones.jpg" alt="Limones cítricos">
+						</div>
+					</div>
+					<div class="vivero-card__info">
+						<div class="vivero-card__header">
+							<div class="vivero-card__text-block">
+								<h3 class="vivero-card__title">Registro ICA</h3>
+								<p class="vivero-card__resolution">Resolución No. 00021485</p>
+								<p class="vivero-card__desc">Para la producción y comercialización de cítricos.</p>
+							</div>
+							<div class="vivero-card__icon">
+								<img src="http://biorganicos.com.co/wp-content/uploads/2026/06/sello-1.svg" alt="Sello ICA cítricos">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
 <!-- ── Blog destacado ─────────────────────────────────────── -->
 <div id="blog_destacado">
 	<div class="grid-container">

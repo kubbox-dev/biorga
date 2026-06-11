@@ -292,7 +292,7 @@ header{
 		#main{
 			section{
 				#lo_que_hacemos {
-    @include spacedY($line-height-computed * 4, $line-height-computed * 4);
+    @include spacedY($line-height-computed * 2.5, $line-height-computed * 2.5);
 
     .header-page {
         margin-bottom: rem-calc($theme-global-margin * 3);
@@ -820,7 +820,7 @@ footer{
 }
 
 #blog_destacado {
-    padding: rem-calc($line-height-computed * 2) 0;
+    padding: rem-calc($line-height-computed * 1.5) 0;
 
     .blog-header {
         margin-bottom: rem-calc($theme-global-margin * 3);
@@ -1034,7 +1034,7 @@ footer{
 
 
 #casos_de_exito {
-    @include spacedY($line-height-computed * 4, $line-height-computed * 4);
+    @include spacedY($line-height-computed * 2.5, $line-height-computed * 2.5);
 
     .casos__main-title {
         font-family: $catamaran;
@@ -1299,6 +1299,196 @@ footer{
         .btn-descargar {
             padding: rem-calc(10 20);
             gap: rem-calc(8);
+        }
+    }
+}
+
+// ── Nuestro vivero ────────────────────────────────────
+#nuestro_vivero {
+    @include spacedY($line-height-computed * 2.5, $line-height-computed * 2.5);
+
+    .vivero-main-title {
+        font-family: $catamaran;
+        font-size: rem-calc(52);
+        font-weight: 700;
+        color: getColor(DarkGray);
+        margin-bottom: rem-calc($theme-global-margin * 1.5);
+
+        @include breakpoint(small only) { font-size: rem-calc(32); }
+    }
+
+    .vivero-description {
+        max-width: rem-calc(900);
+        margin: 0 auto rem-calc($theme-global-margin * 2);
+        font-size: rem-calc(17);
+        color: getColor(LigthGray);
+        line-height: 1.7;
+    }
+
+    .vivero-contamos {
+        display: inline-block;
+        font-size: rem-calc(22);
+        color: getColor(DarkGray);
+        margin-bottom: rem-calc($theme-global-margin * 3);
+        position: relative;
+        padding-bottom: rem-calc(10);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: rem-calc(2);
+            background-color: getColor(LightGreen);
+        }
+    }
+
+    .vivero-cards-row {
+        align-items: start;
+    }
+
+    .vivero-card {
+        &__info {
+            padding: rem-calc($theme-global-padding 0 $theme-global-padding * 1.5);
+        }
+
+        &__header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: rem-calc(20);
+        }
+
+        &__text-block {
+            flex: 1;
+        }
+
+        &__title {
+            font-family: $catamaran;
+            font-size: rem-calc(36);
+            font-weight: 700;
+            color: getColor(MediumGreen);
+            line-height: 1.1;
+            margin-bottom: rem-calc(4);
+
+            @include breakpoint(small only) { font-size: rem-calc(26); }
+        }
+
+        &--left &__title {
+            color: getColor(LightGreen);
+        }
+
+        &__resolution {
+            font-size: rem-calc(18);
+            font-weight: 500;
+            color: getColor(DarkGray);
+            margin-bottom: rem-calc(12);
+        }
+
+        &__desc {
+            font-size: rem-calc(16);
+            color: getColor(LigthGray);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        &__icon {
+            flex-shrink: 0;
+
+            img {
+                width: rem-calc(80);
+                height: rem-calc(80);
+                object-fit: contain;
+            }
+        }
+
+        &__img-outer {
+            position: relative;
+        }
+
+        &__img-wrap {
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        &__accent {
+            position: absolute;
+            width: rem-calc(180);
+            height: rem-calc(180);
+            background-color: getColor(MediumGreen);
+            z-index: 0;
+        }
+
+        // Acento esquina superior-derecha
+        &--left .vivero-card__img-outer {
+            padding-top: rem-calc(14);
+            padding-right: rem-calc(14);
+
+            .vivero-card__accent {
+                top: 0;
+                right: 0;
+            }
+        }
+
+        // Acento esquina inferior-izquierda
+        &--right .vivero-card__img-outer {
+            padding-bottom: rem-calc(14);
+            padding-left: rem-calc(14);
+
+            .vivero-card__accent {
+                bottom: 0;
+                left: 0;
+                background-color: getColor(LightGreen);
+            }
+        }
+    }
+
+    // Tablet
+    @include breakpoint(medium only) {
+        .vivero-card {
+            &__accent {
+                width: rem-calc(140);
+                height: rem-calc(140);
+            }
+
+            &--left .vivero-card__img-outer {
+                padding-top: rem-calc(12);
+                padding-right: rem-calc(12);
+            }
+
+            &--right .vivero-card__img-outer {
+                padding-bottom: rem-calc(12);
+                padding-left: rem-calc(12);
+            }
+        }
+    }
+
+    // Mobile
+    @include breakpoint(small only) {
+        .vivero-card {
+            margin-bottom: rem-calc($theme-global-margin * 2.5);
+
+            &__accent {
+                width: rem-calc(90);
+                height: rem-calc(90);
+            }
+
+            &--left .vivero-card__img-outer {
+                padding-top: rem-calc(10);
+                padding-right: rem-calc(10);
+            }
+
+            &--right .vivero-card__img-outer {
+                padding-bottom: rem-calc(10);
+                padding-left: rem-calc(10);
+            }
         }
     }
 }

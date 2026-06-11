@@ -1,4 +1,11 @@
-<?php if ( has_post_thumbnail() ) : ?>
+<?php $video_entrada = get_field('video_entrada'); ?>
+<?php if ( $video_entrada ) : ?>
+<div class="entry-media-thumbnail entry-media-thumbnail--video">
+	<video autoplay muted loop playsinline>
+		<source src="<?php echo esc_url($video_entrada); ?>" type="video/webm">
+	</video>
+</div>
+<?php elseif ( has_post_thumbnail() ) : ?>
 <div class="entry-media-thumbnail">
 	<figure>
 		<?php the_post_thumbnail( 'post-thumbnail' ); ?>

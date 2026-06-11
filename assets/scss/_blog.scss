@@ -41,6 +41,13 @@
 									width: 100%;
 								}
 							}
+							&--video {
+								video {
+									width: 100%;
+									height: auto;
+									display: block;
+								}
+							}
 						}
 						.meta-entries{
 							margin-top: rem-calc($theme-global-margin);

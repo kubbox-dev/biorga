@@ -230,7 +230,7 @@ $casos      = new WP_Query($args_casos);
 		</div>
 	</div>
 	<div class="vivero-parallax__footer">
-		<a href="/vivero-y-forestal/" class="vivero-parallax__link">--- VER MÁS ---</a>
+		<a href="/cultivamos-vida/" class="vivero-parallax__link">--- VER MÁS ---</a>
 	</div>
 </div>
 

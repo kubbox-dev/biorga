@@ -169,7 +169,7 @@ $casos      = new WP_Query($args_casos);
 						<div class="vivero-card__header">
 							<div class="vivero-card__text-block">
 								<h3 class="vivero-card__title">Registro ICA</h3>
-								<p class="vivero-card__resolution">Resolución No. 00021485</p>
+								<p class="vivero-card__resolution">Resolución No. 00021484</p>
 								<p class="vivero-card__desc">Como comercializadores de plantas ornamentales, forestales, frutales y aromáticas.</p>
 							</div>
 							<div class="vivero-card__icon">

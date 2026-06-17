@@ -819,6 +819,57 @@ footer{
 	}
 }
 
+// ── Botón flotante WhatsApp vivero ─────────────────────────
+.vivero-whatsapp-float {
+    position: fixed;
+    right: rem-calc(24);
+    bottom: rem-calc(24);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: rem-calc(10);
+    background-color: #25D366;
+    color: #fff;
+    padding: rem-calc(14 20);
+    border-radius: rem-calc(50);
+    text-decoration: none;
+    @include box-shadow(0 4px 14px rgba(0, 0, 0, 0.25));
+    @include transition(all 0.3s ease);
+
+    i {
+        font-size: rem-calc(28);
+        flex-shrink: 0;
+        color: #fff;
+    }
+
+    &__text {
+        font-family: $barlow-condensed;
+        font-weight: 600;
+        font-size: rem-calc(14);
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+    }
+
+    &:hover {
+        background-color: #1ebe57;
+        transform: translateY(-2px);
+        @include box-shadow(0 6px 18px rgba(0, 0, 0, 0.3));
+    }
+
+    @include breakpoint(small only) {
+        right: rem-calc(16);
+        bottom: rem-calc(16);
+        padding: rem-calc(14);
+        border-radius: 50%;
+
+        i { font-size: rem-calc(26); }
+
+        &__text { display: none; }
+    }
+}
+
 // ── Banner parallax vivero ────────────────────────────────
 #vivero_parallax {
 

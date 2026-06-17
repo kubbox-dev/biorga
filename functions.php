@@ -164,7 +164,7 @@ add_action( 'init', 'biorgaChangeJquery' );
 function biorgaScripts ()
 {
 	// Theme styles
-	wp_enqueue_style( 'framework-style', DIR_THEME . DS . 'assets/css/theme.css', array(), '6.7' );
+	wp_enqueue_style( 'framework-style', DIR_THEME . DS . 'assets/css/theme.css', array(), '6.8' );
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css', array(), '5.6' );
 	wp_enqueue_style( 'custom-icons', DIR_THEME . DS . 'assets/css/icons.css', array(), '1.0' );
 	wp_enqueue_style( 'custom-style', DIR_THEME . DS . 'assets/css/rs.css', array(), '1.0' );

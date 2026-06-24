@@ -88,14 +88,14 @@ $casos      = new WP_Query($args_casos);
 			<div class="large-4 medium-4 small-12 cell">
 				<div class="lqh-card">
 					<h4 class="lqh-card__title text-center">Acondicionadores para suelos</h4>
-					<div class="lqh-card__inner" style="background-image: url('http://biorganicos.com.co/wp-content/uploads/2026/05/Acondicionadores-para-suelos.png')">
+					<div class="lqh-card__inner" style="background-image: url('https://biorganicos.com.co/wp-content/uploads/2026/05/Acondicionadores-para-suelos.png')">
 						<div class="lqh-card__overlay">
 							<div class="lqh-card__text">
 								<p>En Bio-orgánicos S.A. producimos abonos orgánicos, fertilizantes orgánico-minerales de línea con registro de venta ICA, y mezclas especiales únicas, formuladas a partir de las necesidades del terreno y los cultivos.</p>
 							</div>
 						</div>
 						<div class="lqh-card__icon">
-							<img src="http://biorganicos.com.co/wp-content/uploads/2026/05/Icono-acondicionadores-para-suelos.svg" alt="Acondicionadores para suelos">
+							<img src="https://biorganicos.com.co/wp-content/uploads/2026/05/Icono-acondicionadores-para-suelos.svg" alt="Acondicionadores para suelos">
 						</div>
 					</div>
 					<div class="lqh-card__footer">
@@ -107,14 +107,14 @@ $casos      = new WP_Query($args_casos);
 			<div class="large-4 medium-4 small-12 cell">
 				<div class="lqh-card">
 					<h4 class="lqh-card__title text-center">Nutrición vegetal</h4>
-					<div class="lqh-card__inner" style="background-image: url('http://biorganicos.com.co/wp-content/uploads/2026/05/Nutricion-vegetal.png')">
+					<div class="lqh-card__inner" style="background-image: url('https://biorganicos.com.co/wp-content/uploads/2026/05/Nutricion-vegetal.png')">
 						<div class="lqh-card__overlay">
 							<div class="lqh-card__text">
 								<p>Desarrollamos alternativas orgánicas y orgánico-minerales para la nutrición de los cultivos, según su estado fenológico y el tipo de plantación, con el fin de suministrar los nutrientes necesarios para un óptimo desarrollo.</p>
 							</div>
 						</div>
 						<div class="lqh-card__icon">
-							<img src="http://biorganicos.com.co/wp-content/uploads/2026/05/Icono-nutricion-vegetal.svg" alt="Nutrición vegetal">
+							<img src="https://biorganicos.com.co/wp-content/uploads/2026/05/Icono-nutricion-vegetal.svg" alt="Nutrición vegetal">
 						</div>
 					</div>
 					<div class="lqh-card__footer">
@@ -126,14 +126,14 @@ $casos      = new WP_Query($args_casos);
 			<div class="large-4 medium-4 small-12 cell">
 				<div class="lqh-card">
 					<h4 class="lqh-card__title text-center">Vivero y forestal</h4>
-					<div class="lqh-card__inner" style="background-image: url('http://biorganicos.com.co/wp-content/uploads/2026/05/Vivero-y-forestal.png')">
+					<div class="lqh-card__inner" style="background-image: url('https://biorganicos.com.co/wp-content/uploads/2026/05/Vivero-y-forestal.png')">
 						<div class="lqh-card__overlay">
 							<div class="lqh-card__text">
 								<p>En nuestro vivero producimos plantas ornamentales: rastreras, arbustivas, palmas y árboles nativos e introducidos. Asesoramos a nuestros clientes teniendo en cuenta el clima, el suelo y el proyecto.</p>
 							</div>
 						</div>
 						<div class="lqh-card__icon">
-							<img src="http://biorganicos.com.co/wp-content/uploads/2026/05/Icono-vivero-y-forestal.svg" alt="Vivero y forestal">
+							<img src="https://biorganicos.com.co/wp-content/uploads/2026/05/Icono-vivero-y-forestal.svg" alt="Vivero y forestal">
 						</div>
 					</div>
 					<div class="lqh-card__footer">
@@ -173,14 +173,14 @@ $casos      = new WP_Query($args_casos);
 								<p class="vivero-card__desc">Como comercializadores de plantas ornamentales, forestales, frutales y aromáticas.</p>
 							</div>
 							<div class="vivero-card__icon">
-								<img src="http://biorganicos.com.co/wp-content/uploads/2026/06/sello-2.svg" alt="Sello ICA ornamentales">
+								<img src="https://biorganicos.com.co/wp-content/uploads/2026/06/sello-2.svg" alt="Sello ICA ornamentales">
 							</div>
 						</div>
 					</div>
 					<div class="vivero-card__img-outer">
 						<div class="vivero-card__accent"></div>
 						<div class="vivero-card__img-wrap">
-							<img src="http://biorganicos.com.co/wp-content/uploads/2026/06/plantas-ornamentales.jpg" alt="Plantas ornamentales">
+							<img src="https://biorganicos.com.co/wp-content/uploads/2026/06/plantas-ornamentales.jpg" alt="Plantas ornamentales">
 						</div>
 					</div>
 				</div>
@@ -192,7 +192,7 @@ $casos      = new WP_Query($args_casos);
 					<div class="vivero-card__img-outer">
 						<div class="vivero-card__accent"></div>
 						<div class="vivero-card__img-wrap">
-							<img src="http://biorganicos.com.co/wp-content/uploads/2026/06/Limones.jpg" alt="Limones cítricos">
+							<img src="https://biorganicos.com.co/wp-content/uploads/2026/06/Limones.jpg" alt="Limones cítricos">
 						</div>
 					</div>
 					<div class="vivero-card__info">
@@ -203,7 +203,7 @@ $casos      = new WP_Query($args_casos);
 								<p class="vivero-card__desc">Para la producción y comercialización de cítricos.</p>
 							</div>
 							<div class="vivero-card__icon">
-								<img src="http://biorganicos.com.co/wp-content/uploads/2026/06/sello-1.svg" alt="Sello ICA cítricos">
+								<img src="https://biorganicos.com.co/wp-content/uploads/2026/06/sello-1.svg" alt="Sello ICA cítricos">
 							</div>
 						</div>
 					</div>
@@ -270,15 +270,15 @@ $casos      = new WP_Query($args_casos);
 			<div class="blog-featured__gallery">
 				<div class="blog-featured__gallery-left">
 					<div class="blog-featured__img-wrap">
-						<img src="http://biorganicos.com.co/wp-content/uploads/2026/05/imagen-color-1.png" alt="Blog imagen 1">
+						<img src="https://biorganicos.com.co/wp-content/uploads/2026/05/imagen-color-1.png" alt="Blog imagen 1">
 					</div>
 					<div class="blog-featured__img-wrap">
-						<img src="http://biorganicos.com.co/wp-content/uploads/2026/05/imagen-color-2.png" alt="Blog imagen 2">
+						<img src="https://biorganicos.com.co/wp-content/uploads/2026/05/imagen-color-2.png" alt="Blog imagen 2">
 					</div>
 				</div>
 				<div class="blog-featured__gallery-right">
 					<div class="blog-featured__img-wrap blog-featured__img-wrap--tall">
-						<img src="http://biorganicos.com.co/wp-content/uploads/2026/05/imagen-color-3.png" alt="Blog imagen 3">
+						<img src="https://biorganicos.com.co/wp-content/uploads/2026/05/imagen-color-3.png" alt="Blog imagen 3">
 					</div>
 					<div class="blog-featured__accent"></div>
 				</div>

@@ -164,7 +164,7 @@ add_action( 'init', 'biorgaChangeJquery' );
 function biorgaScripts ()
 {
 	// Theme styles
-	wp_enqueue_style( 'framework-style', DIR_THEME . DS . 'assets/css/theme.css', array(), '6.14' );
+	wp_enqueue_style( 'framework-style', DIR_THEME . DS . 'assets/css/theme.css', array(), '6.15' );
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css', array(), '5.6' );
 	wp_enqueue_style( 'custom-icons', DIR_THEME . DS . 'assets/css/icons.css', array(), '1.0' );
 	wp_enqueue_style( 'custom-style', DIR_THEME . DS . 'assets/css/rs.css', array(), '1.0' );
@@ -177,7 +177,7 @@ function biorgaScripts ()
 	wp_enqueue_script('what-input', DIR_THEME . DS . "assets/js/vendor/what-input.min.js", array('jquery'), '4.1.6', true);
 	wp_enqueue_script('framework-script', DIR_THEME . DS . "assets/js/vendor/foundation.min.js", array('jquery'), '6.5', true);
 	wp_enqueue_script( 'TweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js', array(), '2.0.2', true );
-	wp_enqueue_script('scripts', DIR_THEME . DS . "assets/js/theme.js", array('jquery'), '1.1.0', true);
+	wp_enqueue_script('scripts', DIR_THEME . DS . "assets/js/theme.js", array('jquery'), '1.2.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'biorgaScripts' );
 

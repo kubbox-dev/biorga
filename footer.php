@@ -14,6 +14,8 @@
 	<i class="fab fa-whatsapp"></i>
 	<span class="vivero-whatsapp-float__text">Para comunicarte<br>con el vivero</span>
 </a>
+
+<?php biorgaLoadTemplate( 'template-parts/footer/promo-popup' ); ?>
 </div>
 </div>
 <?php wp_footer(); ?>
